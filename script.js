@@ -1,15 +1,17 @@
 let aux = parseInt(document.getElementsByTagName("span")[0].innerHTML);
 switch(aux){
 	case 1:
-		dado = prompt("Digite um dado");
-		if(confirm("Deseja verificar o tipo do dado informado?")){
-			if(parseInt(dado)){
-				dado = parseInt(dado);
+		dado = parseInt(prompt("Digite um número inteiro positivo"));
+		if(dado > 0){
+			if(dado % 2 ==0){
+				alert("O número é par");
 			}
-			document.write("<h3>Tipo do dado: "+typeof(dado)+"</h3>");
+			else{
+				alert("O número é impar");
+			}
 		}
 		else{
-			document.write("Obrigado por visitar essa página");
+			document.write("Valor Inválido");
 		}
 		break;
 	case 2:
@@ -35,20 +37,6 @@ switch(aux){
 		break;
 	case 3:
 		dado = parseInt(prompt("Digite um número inteiro positivo"));
-		if(dado > 0){
-			if(dado % 2 ==0){
-				alert("O número é par");
-			}
-			else{
-				alert("O número é impar");
-			}
-		}
-		else{
-			document.write("Valor Inválido");
-		}
-		break;
-	case 4:
-		dado = parseInt(prompt("Digite um número inteiro positivo"));
 		num = dado;
 		if(dado > 0){
 			for(i = dado-1; i >0; i--){
@@ -58,6 +46,18 @@ switch(aux){
 		}
 		else{
 			document.write("Valor Inválido");
+		}
+		break;
+	case 4:
+		dado = prompt("Digite um dado");
+		if(confirm("Deseja verificar o tipo do dado informado?")){
+			if(parseInt(dado)){
+				dado = parseInt(dado);
+			}
+			document.write("<h3>Tipo do dado: "+typeof(dado)+"</h3>");
+		}
+		else{
+			document.write("Obrigado por visitar essa página");
 		}
 		break;
 }
